@@ -11,7 +11,11 @@ div.content-wrapper { padding: 2em; }
 
 body #app,
 body .app { 
-  padding: 1em; 
+  margin: 1em; 
+}
+
+.item .list {
+  padding-left: 2em;
 }
 
 h1 {
@@ -21,7 +25,12 @@ h1 {
 }
 
 label { font-size: 130%; }
-form p input { vertical-align: text-top; } 
+.item { margin: 2ex 0; }
+
+.item input, 
+.item label {
+  vertical-align: baseline;
+}
 
 .done { color: #999; }
 
@@ -30,6 +39,23 @@ form p input { vertical-align: text-top; }
   display: inline-block;
   margin-left: 1.4ex;
 }
+
+.list-collapse, 
+.list-expand {
+  color: darkblue;
+  cursor: pointer;
+  margin-left: 1ex;
+  text-decoration: underline;
+  font-size: 90%;
+}
+
+.in-line div.item {
+  display: inline-block;
+  padding-right: 2ex;
+  margin: 2px; 
+}
+
+.in-line .mark { margin-left: 0; }
 
 .footer {
   background: #e4e4e4;
@@ -43,15 +69,19 @@ form p input { vertical-align: text-top; }
 .footer p { vertical-align: middle; }
 
 @media screen and (min-width: 600px) {
-  body #app, body .app {  margin-left: 2em;  }
+  body #app, 
+  body .app { padding: 1ex; }
   h1 { margin-bottom: 2em; }
-  div.content-wrapper { padding: 2em 2em 8em 2em; } 
+  div.content-wrapper { padding: 2em 2em 4em 2em; } 
   .pure-menu-link { width: 12ex; }
+  .item .list { padding-left: 2em; }  
 }
 
 @media screen and (min-width: 800px) {
-  div.content-wrapper { margin-left: 4em; }
-  form p input { margin-right: 1ex; } 
+  div.content-wrapper { padding-left: 4em; }
+  p input,
+  .item input { margin-right: 1ex; } 
+  .item .list { padding-left: 4em; }  
 }
 
 @media screen and (min-width: 1200px) {
